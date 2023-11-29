@@ -1,0 +1,78 @@
+@use "../utils" as u;
+
+.header {
+  position: relative;
+  color: white;
+  background: url(../assets/images/image-hero-lg.jpg) no-repeat;
+  background-size: cover;
+
+  &__content {
+    position: relative;
+    padding-bottom: 146px;
+    z-index: 2;
+  }
+
+  &__top {
+    padding: 64px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
+  }
+
+  &__logo-link {
+    flex-shrink: 0;
+  }
+
+  .nav {
+    @include u.mobile {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      &:first-child {
+        margin-left: 40px;
+      }
+    }
+  
+    &__item {
+      margin-left: 32px;
+    }
+  
+    &__link {
+      color: #edefff;
+    }
+  }
+
+  &__bottom {
+  }
+
+  &__title {
+    max-width: 650px;
+    margin-top: 62px;
+    padding: 38px 42px;
+    font-size: 72px;
+    text-transform: uppercase;
+    border: 2px solid white;
+
+    @include u.tablet {
+      max-width: 520px;
+      font-size: 56px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 0;
+  }
+}
+

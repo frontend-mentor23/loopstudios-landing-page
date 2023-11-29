@@ -1,1 +1,16 @@
+@font-face {
+  font-family: 'Alata';
+  src: url(../assets/fonts/Alata-Regular.ttf);
+  font-weight: 400;
+}
 
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url(../assets/fonts/JosefinSans-Light.ttf);
+  font-weight: 300;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: inherit;
+}
