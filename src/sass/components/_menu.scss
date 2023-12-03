@@ -16,6 +16,12 @@
 }
 
 @include u.mobile {
+  .hide-page-content {
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+  }
+
   .hamburger {
     display: block;
   }
