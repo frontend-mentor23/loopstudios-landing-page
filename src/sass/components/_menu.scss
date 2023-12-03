@@ -1,0 +1,65 @@
+@use "../utils/" as u;
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    -webkit-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    background-color: white;
+  }
+}
+
+@include u.mobile {
+  .hamburger {
+    display: block;
+  }
+  
+  .hamburger.active {
+
+    .bar {
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+
+  .nav__list {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    gap: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    width: 100%;
+    transition: 0.2s;
+  }
+  .nav__list.active {
+    left: 0;
+  }
+
+  .nav__item {
+    margin: 12px 0;
+
+    .nav__link {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+  }
+}
