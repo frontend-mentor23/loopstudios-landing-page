@@ -14,68 +14,30 @@
 
   &__top {
     padding: 54px 0;
-    font-family: 'Alata', sans-serif;
   }
 
-  .nav {
+  &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &:has(.nav__list.active) {
-      .header__logo-link {
+      .logo-link {
         position: relative;
         z-index: 1;
       }
     }
+  }
 
-    &__logo-link {
-      padding: 10px 0;
-      flex-shrink: 0;
-    }
+  .nav {
 
     &__list {
-      display: flex;
-      flex-wrap: wrap;
-
-      &:first-child {
-        margin-left: 40px;
-
-        @include u.mobile {
-          margin-left: 0;
-        }
-      }
-    }
-  
-    &__item {
-      margin-left: 32px;
-    }
-  
-    &__link {
-      position: relative;
-      padding: 8px 0;
-      color: #edefff;
-
-      &::after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: white;
-        transition: transform .2s;
-        transform: scaleX(0);
-      }
-
-      &:hover::after {
-        transform: scaleX(1);
-      }
+      margin-left: 50px;
     }
   }
 
-  &__bottom {
-  }
+  // &__bottom {
+  // }
 
   &__title {
     max-width: 650px;
