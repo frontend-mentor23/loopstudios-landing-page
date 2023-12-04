@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .footer {
   font-family: "Alata", sans-serif;
   background-color: black;
@@ -9,6 +11,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include u.tablet_small {
+      gap: 20px;
+    }
+    @include u.mobile {
+      flex-direction: column;
+      gap: 40px;
+    }
   }
 
   &__logo-link {
@@ -20,15 +30,42 @@
     flex-direction: column;
     gap: 18px;
 
+    @include u.tablet_small {
+      gap: 10px;
+    }
+    @include u.mobile {
+      align-items: center;
+    }
+
     .social-links {
       align-self: flex-end;
       display: flex;
       gap: 16px;
+
+      @include u.mobile {
+        align-self: center;
+      }
 
       .social-link {
         display: block;
         padding: 10px 0;
       }
     }
+  }
+
+  &__nav-list {
+
+    @include u.tablet_small {
+      column-gap: 20px;
+    }
+    @include u.mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  .copyright-text {
+    text-align: right;
+    color: #696969;
   }
 }

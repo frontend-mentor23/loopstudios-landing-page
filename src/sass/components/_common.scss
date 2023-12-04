@@ -1,3 +1,5 @@
+@use "../utils/" as u;
+
 .content {
   max-width: 1148px;
   margin: 0 auto;
@@ -13,6 +15,18 @@
     flex-wrap: wrap;
     column-gap: 32px;
     row-gap: 10px;
+  }
+}
+
+.section-title {
+  font-size: 48px;
+  text-transform: uppercase;
+
+  @include u.tablet_small {
+    font-size: 36px;
+  }
+  @include u.mobile_small {
+    font-size: 28px;
   }
 }
 
@@ -42,8 +56,4 @@
   display: block;
   padding: 10px 0;
   flex-shrink: 0;
-}
-
-.copyright-text {
-  color: #696969;
 }

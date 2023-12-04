@@ -42,7 +42,7 @@
     }
   }
 
-  .nav__list {
+  .header__nav-list {
     position: fixed;
     left: -100%;
     top: 0;
@@ -55,14 +55,15 @@
     width: 100%;
     transition: 0.2s;
   }
-  .nav__list.active {
+  .header__nav-list.active {
+    padding-left: 18px;
     left: 0;
   }
 
-  .nav__item {
+  .header__nav-item {
     margin: 12px 0;
 
-    .nav__link {
+    .header__nav-link {
       font-family: 'Josefin Sans', sans-serif;
       font-size: 24px;
       text-transform: uppercase;
